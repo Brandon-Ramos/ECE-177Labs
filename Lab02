@@ -1,4 +1,4 @@
-Problem 1
+Problem1.c
 
 #include <stdio.h>      // allows use of printf and scanf functions
 
@@ -20,7 +20,7 @@ int main() {
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-Problem 2
+Problem2.c
 
 #include <stdio.h>      // allows use of printf and scanf functions
 
@@ -40,7 +40,7 @@ int main() {
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-Problem 3
+Problem3.c
 
 #include <stdio.h>
 #include <math.h>
@@ -72,3 +72,30 @@ int main() {
 
 
 //when compiling Problem 3, do:    gcc -lm filename.c -o filename
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Problem4.c
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+        double initPos;
+        double position;
+        double initVelo;
+        double time;
+        const double accel  = -32.2;
+
+        printf("Initial Position: ");
+        scanf("%lf", &initPos);
+
+        printf("Initial Velocity: ");
+        scanf("%lf", &initVelo);
+
+        for(time = 0; time <= 100; time += 5){
+                position = (initPos + (initVelo * time) + (0.5 * accel * (time * time)));
+                printf("At time %.0lf, object's position is %.2lf\n", time, position);
+        }
+        return 0;
+}
