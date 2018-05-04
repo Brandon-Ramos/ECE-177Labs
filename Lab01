@@ -1,0 +1,38 @@
+The first lab is one of the hardest in my opinion. This is a complete command list that will help you get through it. These commands 
+  are worth remembering.
+  
+passwd 123456             //passwd willl change your password to what follows dthe command. So passwd 123456 sets your password to 123456
+mkdir lab01               //mkdir will make a new directory
+nano filename             //nano filename will make a new file named filename
+cd lab01                  //cd is used to change directory. cd lab01 switches to lab01 directory
+gcc file.c -o file        //gcc is used to compile and run a file. file.c is compiled and can be run as file
+./ file5                  //./ is used to run a file you have compiled as file5
+rm file5                  //rm is used to remove a file named file5
+cat file5.c               //cat is used to see the contents of a file called file5.c in your current directory
+ls                        //ls is used to get a list of files in your current directory
+ls -l                     //ls -l is used to get a long listing of files in your current directory (displays more information)
+gcc -lm file.c -o file    //tells the compiler to link math, this is VERY USEFUL for using the sqrt function in lab02!
+./stuff > things          //runs a file called stuff and redirects its output to a file called things
+diff stuff things         //finds the difference between two files named stuff and things
+//                        //a double / is use to add a single line comment to your code
+/*     */                 //These are used for multi-line comments to to comment out blocks of code
+gcc -wall stuff.c         //gcc -wall will print more warnings when compiling the file stuff.c
+ls > stuff                //creates a listing of files in your current directory and redirects the output to a file called stuff
+ls -l >> stuff            //creates a long listing of files in your current directory and appends the date to the file called stuff
+grep printf file1 file2   //grep will search files for lines containing the word after the grep command. Search file1 and file2 for printf
+history                   //Typing history will get a complete history of all the commands you have typed so far
+history | grep gcc        //This gets a history with the results piped (|) through grep looking for lines that contain gcc
+
+
+
+This next command is SUPER USEFUL!
+How to copy everything, or just a few files, from a directory to the directory you are currently in.
+
+cp ~/directoryname/anotherDirectorryName(optiional)/* .
+
+What is happening is you are trying to copy everything for one directory to the directory you are currently in. The * means to copy
+  everything. In place of the asterisk, you can type a specific file name to copy just that one file over to the directory you are
+  currently in.
+
+EX  cp~/lab01/stuff.c .
+This would search your lab01 directory for a file called stuff.c and copy it over to the directory you are currently in. 
