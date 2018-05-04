@@ -1,0 +1,147 @@
+cgrade.c
+
+#include<stdio.h>
+
+int main(){
+int hours;
+int minutes;
+int seconds;
+int value;
+int i;
+
+while(1){
+        printf("Enter hours, minutes, seconds: ");
+        scanf("%d %d %d", &hours, &minutes, &seconds);
+
+        if(hours == 0 && minutes == 0 && seconds == 0){
+                break;
+        }
+        value = hours;
+        for(i = 1; i <= 3; i++){
+                if(i == 2){
+                value = minutes;
+        }
+        else if(i == 3){
+                value = seconds;
+        }
+        if(value >= 0 && value <= 59){
+                for(int i = 1; i <= value; i++){
+                printf("*");
+                }
+        }
+        else{
+                printf("Error %d", value);
+        }
+                printf("\n");
+        }
+                printf("\n");
+        }
+        return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+bgrade.c
+
+#include<stdio.h>
+
+int main(){
+int hours;
+int minutes;
+int seconds;
+int value;
+int i;
+int j;
+int result;
+int mask;
+
+while(1){
+        printf("Enter hours, minutes, seconds: ");
+        scanf("%d %d %d", &hours, &minutes, &seconds);
+        
+        value = hours;
+        for (i = 1; i <= 3; i++){
+                if(i == 2){
+                        value = minutes;
+        }
+        else if(i == 3){
+                        value = seconds;
+        }
+        if(value >= 0 && value <= 59){
+                mask = 32;
+                        for(j = 1; j <= 6; j++){
+                                result = value & mask;
+                if(result != 0){
+                        printf("*");
+                        }
+                else{
+                        printf("_");
+                }
+                        mask >>= 1;
+                }
+        }
+        else{
+                printf("error %d", value);
+        }
+                printf("\n");
+        }
+                printf("\n");
+        }
+        return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+agrade.c
+
+#include <stdio.h>
+
+int main(){
+int hours, minutes, seconds, value, i, j, k, result, mask, divisor, tensDigit, onesDigit;
+
+while(1){
+        printf("Enter hours, minutes, seconds: ");
+        scanf("%d %d %d", &hours, &minutes, &seconds);
+
+        value = hours;
+        for(i = 1; i <= 3; i++){
+                if(i == 1 && hours > 24){
+                        printf("Error %d\n", value);
+                        continue;
+                }
+                if(i == 2){
+                        value = minutes;
+                }
+                else if(i == 3){
+                        value = seconds;
+                }
+                if(value >= 0 && value <= 59){
+                        tensDigit = value / 10;
+                        onesDigit = value % 10;
+                        divisor = tensDigit;
+                for(k = 1; k <= 2; k++){
+                        if(k == 2){
+                                divisor = onesDigit;
+                        }
+                        mask = 8;
+                                for(j = 1; j <= 4; j++){
+                                        result = divisor & mask;
+                                                if(result != 0){
+                                                        printf("*");
+                                                }
+                                                else{
+                                                        printf("_");
+                                                }
+                                                mask >>= 1;
+                                        }
+                                        printf("\n");
+                                }
+                        }
+                        else{
+                                printf("Error: %d\n", value);
+                        }
+                }
+                printf("\n");
+        }
+        return 0;
+}
