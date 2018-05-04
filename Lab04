@@ -4,7 +4,6 @@ Lab04 B Grade
 #include <string.h>
 
 int main() {    // Code to compute the date of Easter --- MAKE MINIMAL CHANGES!
-
         char A, B, C, D, E, F, G, H, I, K, L, M, N, P;  // These work as char
         int year, month, day;
         int startyear, endyear;
@@ -25,16 +24,13 @@ int main() {    // Code to compute the date of Easter --- MAKE MINIMAL CHANGES!
         if ((startyear >= 1700) && (startyear < 1800)){ /* For the heck of it   */
                 printf("startyear is in 1700s!\n");     /* flag startyear in the 1700s  */
         }
-
         if ((startyear >= 1800) && (startyear < 1900)){         /* also startyear in the 1800s */
                 printf("startyear is in 1800s!\n\n");   /* using different test expression */
         }
-
         if (startyear == 2000){                 // and also startyear equal to 2000
                 printf("startyear");                    // printf broken into multiple lines
                 printf("starts in 2000!\n");            // (leave it as two lines)
         }
-
         for (year = startyear; year <= endyear; year++) {
                 A = year % 19;
                 B = year / 100;
